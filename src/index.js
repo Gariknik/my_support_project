@@ -1,17 +1,60 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import ReactDOM from 'react-dom';
+import App from './app';
 import reportWebVitals from './reportWebVitals';
+import styled, {createGlobalStyle} from 'styled-components';
+import Monts400woff from "./fonts/montserrat-v24-latin-regular.woff";
+import Monts400woff2 from "./fonts/montserrat-v24-latin-regular.woff2";
+import Monts600woff from "./fonts/montserrat-v24-latin-600.woff";
+import Monts600woff2 from "./fonts/montserrat-v24-latin-600.woff2";
+import Monts800woff from "./fonts/montserrat-v24-latin-800.woff";
+import Monts800woff2 from "./fonts/montserrat-v24-latin-800.woff2";
+
+
+const Global = createGlobalStyle`
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    };
+    /* montserrat-regular - latin */
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      src: url('${Monts400woff2}') format('woff2'), /* Super Modern Browsers */
+           url(${Monts400woff}) format('woff'), /* Modern Browsers */
+    };
+    /* montserrat-800 - latin */
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 800;
+      src: 
+           url('${Monts800woff2}') format('woff2'), /* Super Modern Browsers */
+           url('${Monts800woff}') format('woff'), /* Modern Browsers */
+    };
+    
+    /* montserrat-600 - latin */
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      src: url('${Monts600woff2}') format('woff2'), /* Super Modern Browsers */
+           url('${Monts600woff}') format('woff'), /* Modern Browsers */
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+    };
+`;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <>
+    <Global/>
     <App />
-  </React.StrictMode>
+  </>,
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();
