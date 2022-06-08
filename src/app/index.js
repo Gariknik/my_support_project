@@ -2,8 +2,20 @@ import React from "react";
 import styled from 'styled-components';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Content from "../components/Content"
+import HomePage from "../pages/HomePage"
 
+
+const App = () => {
+    return (
+        <AppWrapper>
+            <Header />
+            <HomePage/>
+            <Footer/>
+        </AppWrapper>
+    );
+}
+
+export default App;
 
 
 const AppWrapper = styled.div`
@@ -14,16 +26,3 @@ const AppWrapper = styled.div`
     justify-content: center;
     align-items: center;
 `;
-
-
-const App = () => {
-    return (
-        <AppWrapper>
-            <Header />
-            <Content/>
-            <Footer/>
-        </AppWrapper>
-    );
-}
-
-export default App;

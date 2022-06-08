@@ -1,15 +1,33 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledButton = styled.a`
+
+
+const HomeLink = ({icon, title, alt}) => {
+    return (
+        <StyledLink href='https://'>
+            <LinkIcon>
+                <img src={icon} alt={alt}/>
+            </LinkIcon>
+            <LinkTitle>
+                {title}
+            </LinkTitle>
+        </StyledLink>
+)
+    ;
+};
+
+export default HomeLink;
+
+const StyledLink = styled.a`
     display: flex;
     justify-content: space-between;
-    margin: 0 0 48px 0;
+    margin-bottom: 48px;
     text-decoration: none;
 
 `;
 
-const TextButton = styled.div`
+const LinkTitle = styled.div`
     display: flex;
     width: 426px;
     height: 48px;
@@ -23,18 +41,20 @@ const TextButton = styled.div`
     justify-content: center;
     align-items: center;
     transition: all .2s ease;
+    
     :hover{
-       color: white;
+       color: #fff;
        background: #6BD5D5;
     };
+    
     :active{
        color: #C9A31E;
-       background: white;
-       transform: translate(0em, 0.3rem);
+       background: #fff;
+       transform: translate(0, 5px);
     };
 `;
 
-const IconButton = styled.div`
+const LinkIcon = styled.div`
     display: block;
     width: 48px;
     height: 48px;
@@ -42,29 +62,15 @@ const IconButton = styled.div`
     border: none; 
     outline: none;
     transition: all .2s ease;
+    
     &:hover{
-       fill: white;
+       fill: #fff;
        background: #6BD5D5;
     };
+    
     &:active{
        color: #C9A31E;
-       background: white;
-       transform: translate(0em, 0.3rem);
+       background: #fff;
+       transform: translate(0, 5px);
     };
 `;
-
-const Button = ({valueIcon, valueText}) => {
-    return (
-        <StyledButton href='https://'>
-            <IconButton>
-                <img src={valueIcon} alt='link to'/>
-            </IconButton>
-            <TextButton>
-                {valueText}
-            </TextButton>
-        </StyledButton>
-)
-    ;
-};
-
-export default Button;

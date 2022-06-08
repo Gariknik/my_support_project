@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
 import reportWebVitals from './reportWebVitals';
-import styled, {createGlobalStyle} from 'styled-components';
-import Monts400woff from "./fonts/montserrat-v24-latin-regular.woff";
-import Monts400woff2 from "./fonts/montserrat-v24-latin-regular.woff2";
-import Monts600woff from "./fonts/montserrat-v24-latin-600.woff";
-import Monts600woff2 from "./fonts/montserrat-v24-latin-600.woff2";
-import Monts800woff from "./fonts/montserrat-v24-latin-800.woff";
-import Monts800woff2 from "./fonts/montserrat-v24-latin-800.woff2";
+import {createGlobalStyle} from 'styled-components';
+import Monts400woff from "./assets/fonts/montserrat-v24-latin-regular.woff";
+import Monts400woff2 from "./assets/fonts/montserrat-v24-latin-regular.woff2";
+import Monts600woff from "./assets/fonts/montserrat-v24-latin-600.woff";
+import Monts600woff2 from "./assets/fonts/montserrat-v24-latin-600.woff2";
+import Monts800woff from "./assets/fonts/montserrat-v24-latin-800.woff";
+import Monts800woff2 from "./assets/fonts/montserrat-v24-latin-800.woff2";
 
 
 const Global = createGlobalStyle`
@@ -48,12 +48,12 @@ const Global = createGlobalStyle`
     };
 `;
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <>
     <Global/>
     <App />
   </>,
+  document.getElementById(`root`)
 );
 
 
