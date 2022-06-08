@@ -9,7 +9,7 @@ const HomePage = () => {
     return (
         <StyledContent>
             <Title>
-                Вітаємо на SUPPORT.GE
+                Вітаємо на SUPPORT.CLONE
             </Title>
             <HomeLink icon={Into} title='Увійти в особистий кабінет' alt='icon for a cabinet link' />
             <HomeLink icon={AddUser} title='Зареєструвати користувача' alt='icon for a user registration link' />
