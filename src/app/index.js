@@ -2,14 +2,15 @@ import React from "react";
 import styled from 'styled-components';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import HomePage from "../pages/HomePage"
+import HomePage from "../pages/HomePage";
+import LoginPage from "../pages/LoginPage";
 
 
 const App = () => {
     return (
         <AppWrapper>
             <Header />
-            <HomePage/>
+            <LoginPage/>
             <Footer/>
         </AppWrapper>
     );
