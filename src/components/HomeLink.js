@@ -1,30 +1,29 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
 
 
-const HomeLink = ({icon, title, alt}) => {
+const HomeLink = ({icon, title, alt, href}) => {
     return (
-        <StyledLink href='https://'>
-            <LinkIcon>
-                <img src={icon} alt={alt}/>
-            </LinkIcon>
-            <LinkTitle>
-                {title}
-            </LinkTitle>
-        </StyledLink>
-)
-    ;
+            <StyledLink to={`/${href}`}>
+                <LinkIcon>
+                    <img src={icon} alt={alt}/>
+                </LinkIcon>
+                <LinkTitle>
+                    {title}
+                </LinkTitle>
+            </StyledLink>
+    );
 };
 
 export default HomeLink;
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
     display: flex;
     justify-content: space-between;
     margin-bottom: 48px;
     text-decoration: none;
-
 `;
 
 const LinkTitle = styled.div`

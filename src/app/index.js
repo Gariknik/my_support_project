@@ -1,17 +1,30 @@
 import React from "react";
 import styled from 'styled-components';
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+} from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import HomePage from "../pages/HomePage"
+import HomePage from "../pages/HomePage";
+import LoginPage from "../pages/LoginPage";
+import Error from "../pages/Error"
 
 
 const App = () => {
     return (
-        <AppWrapper>
-            <Header />
-            <HomePage/>
-            <Footer/>
-        </AppWrapper>
+        <BrowserRouter>
+            <AppWrapper>
+                <Header />
+                <Routes>
+                    <Route path="/" element={<HomePage/>}/>
+                    <Route path="/login" element={<LoginPage/>}/>
+                    <Route path="*" element={<Error/>}/>
+                </Routes>
+                <Footer/>
+            </AppWrapper>
+        </BrowserRouter>
     );
 }
 

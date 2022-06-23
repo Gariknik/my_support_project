@@ -11,12 +11,11 @@ const HomePage = () => {
             <Title>
                 Вітаємо на SUPPORT.CLONE
             </Title>
-            <HomeLink icon={Into} title='Увійти в особистий кабінет' alt='icon for a cabinet link' />
+            <HomeLink icon={Into} title='Увійти в особистий кабінет' alt='icon for a cabinet link' href="login" />
             <HomeLink icon={AddUser} title='Зареєструвати користувача' alt='icon for a user registration link' />
             <HomeLink icon={AddService} title='Реєстрація сервісу' alt='icon for a service registration link' />
         </StyledContent>
-)
-    ;
+    );
 };
 
 export default HomePage;

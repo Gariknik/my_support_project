@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import LogoIcon from '../assets/IconLogo.svg';
 
@@ -6,10 +7,12 @@ import LogoIcon from '../assets/IconLogo.svg';
 const Header = () => {
     return (
         <StyledHeader>
-            <Logo>
-                <img src={LogoIcon} alt='Logo'/>
-                <LogoText>SUPPORT.GE</LogoText>
-            </Logo>
+            <StyledLink to='/'>
+                <Logo>
+                    <img src={LogoIcon} alt='Logo'/>
+                    <LogoText>SUPPORT.GE</LogoText>
+                </Logo>
+            </StyledLink>
         </StyledHeader>
 )
     ;
@@ -27,12 +30,18 @@ const StyledHeader = styled.header`
     border-radius: 0 0 7px 7px;
     background: #fff;
     padding: 10px 60px;
+    text-decoration: none;
+`;
+
+const StyledLink = styled(Link)`
+    text-decoration: none;
 `;
 
 const Logo = styled.div`
     height: 100%;
     display: flex;
     align-items: center;
+    cursor: pointer;
 `;
 
 const LogoText = styled.div`
