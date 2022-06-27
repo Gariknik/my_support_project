@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useForm } from "react-hook-form";
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import Input from "../components/Input";
 import LoginLink from "../components/LoginLink";
@@ -11,7 +12,7 @@ import PasswordIcon from "../assets/icons/PasswordIcon.svg";
 const MIN_LENGTH = 6;
 const MAX_LENGTH = 25;
 const EMAIL_PATTERN = /^([^!#$%&‘*+-/=?^_`{|}~ ])([a-z_A-Z.0-9-]*)@\w{1,63}\.\w{1,63}([^!#$%&‘*+—/=?^_`{|}~ ])$/;
-const PASSWORD_PATTERN = /\s+/g;
+const PASSWORD_PATTERN = /^[^ ]+/g;
 
 
 async function loginUser(url = '', data = {}) {
@@ -42,6 +43,8 @@ async function loginUser(url = '', data = {}) {
 }
 
 const LoginPage = () => {
+    const {t} = useTranslation('translation',  {keyPrefix: 'loginpage'});
+
     const [responseMessage, setResponseMessage] = useState('')
     const [responseIsError, setResponseIsError] = useState(false)
     const {
@@ -61,51 +64,50 @@ const LoginPage = () => {
         }
     };
 
-
     return (
         <StyledForm onSubmit={handleSubmit(onSubmit)}>
-            <Title>Вхід в особистий кабінет</Title>
+            <Title>{t("title")}</Title>
             <StyledMessage isError={responseIsError}>{responseMessage}</StyledMessage>
             <Input
-                placeholder='Введите почту'
+                placeholder={t("placeholders.email")}
                 register={register}
                 name='email'
                 required={true}
                 pattern={{
                     value: EMAIL_PATTERN,
-                    message: 'Не верно введён адрес'}
+                    message: t("errors.validEmail")}
                 }
                 icon={EmailIcon}
-                alt='Icon for a email'
+                alt={t("alts.iconEmail")}
                 error={errors}
             />
             <Input
                 type='password'
-                placeholder="Введите пароль"
+                placeholder={t("placeholders.password")}
                 register={register}
                 name="password"
                 required={true}
                 pattern={{
                     value: PASSWORD_PATTERN,
-                    message: 'В пароле не допустим символ пробела'
+                    message: t("errors.validPassword")
                 }}
                 rules={{
                     minLength: {
                         value: MIN_LENGTH,
-                        message: "Минимум 6 символов"
+                        message: t("errors.minLength")
                     },
                     maxLength: {
                         value: MAX_LENGTH,
-                        message: "Максимум 25 символов"
+                        message: t("errors.maxLength")
                     }
                 }}
                 icon={PasswordIcon}
-                alt='Icon for a password'
+                alt={t("alts.iconPassword")}
                 error={errors}
             />
             <LoginLinkWrapper>
-                <LoginLink icon={Lock} title='Забули пароль?' alt='icon for a cabinet link'/>
-                <StyledButtonSubmit type="submit" value='Увійти' disabled={!isValid} />
+                <LoginLink icon={Lock} title={t("links.passwordReset")} alt={t("alts.iconLogin")}/>
+                <StyledButtonSubmit type="submit" value={t("links.login")} disabled={!isValid} />
             </LoginLinkWrapper>
         </StyledForm>
     );

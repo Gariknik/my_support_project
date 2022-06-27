@@ -1,0 +1,51 @@
+{
+	"header": {
+		"alts": {
+			"iconLogo": "Логотип"
+		}
+	},
+	"footer": {
+		"alts": {
+			"iconFacebook": "Іконка для посилання на Facebook",
+			"iconInstagram": "Іконка для посилання на Instagram"
+		}
+	},
+	"homepage": {
+		"title": "Вітаємо на SUPPORT.CLONE",
+		"links": {
+			"login": "Увійти в особистий кабінет",
+			"createAccount": "Зареєструвати користувача",
+			"createService": "Реєстрація сервісу"
+		},
+		"alts": {
+			"iconLogin": "Іконка для посилання на особистий кабінет",
+			"iconСreateAccount": "Іконка для посилання на реєстрацію користувача",
+			"iconСreateService": "Іконка для посилання на реєстрацію сервісу"
+			}
+	},
+	
+	"loginpage": {
+		"title": "Вхід в особистий кабінет",
+		"links": {
+			"login": "Увійти",
+			"passwordReset": "Забули пароль?"
+		},
+		"placeholders":{
+			"email": "Введіть пошту",
+			"password": "Введіть пароль"
+		},
+		"errors": {
+			"validEmail": "Невірно введено адресу",
+			"validPassword": "У паролі не допустимо символ пробілу",
+			"minLength": "Мінімум 6 символів",
+			"maxLength": "Максимум 25 символів",
+			"required": "Поле обов'язкове до заповнення"
+		},
+		"alts": {
+			"iconPassword": "Іконка для пароля",
+			"iconLogin": "Іконка для посилання на кабінет",
+			"iconEmail": "Іконка для електронної пошти"
+		}
+	}
+
+}

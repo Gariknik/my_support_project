@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
 import reportWebVitals from './reportWebVitals';
@@ -9,7 +9,7 @@ import Monts600woff from "./assets/fonts/montserrat-v24-latin-600.woff";
 import Monts600woff2 from "./assets/fonts/montserrat-v24-latin-600.woff2";
 import Monts800woff from "./assets/fonts/montserrat-v24-latin-800.woff";
 import Monts800woff2 from "./assets/fonts/montserrat-v24-latin-800.woff2";
-
+import './i18n';
 
 const Global = createGlobalStyle`
     * {
@@ -49,10 +49,10 @@ const Global = createGlobalStyle`
 `;
 
 ReactDOM.render(
-  <>
+  <Suspense fallback={<div>Loading...</div>}>
     <Global/>
     <App />
-  </>,
+  </Suspense>,
   document.getElementById(`root`)
 );
 

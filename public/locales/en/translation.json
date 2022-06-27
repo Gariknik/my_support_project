@@ -1,0 +1,50 @@
+{	
+	"header": {
+		"alts": {
+			"iconLogo": "Logo"
+		}
+	},
+	"footer": {
+		"alts": {
+			"iconFacebook": "Icon for link to Facebook",
+			"iconInstagram": "Icon for link to Instagram"
+		}
+	},
+	"homepage": {
+		"title": "Welcome to SUPPORT.CLONE",
+		"links": {
+			"login": "Log in to personal account",
+			"createAccount": "Register User",
+			"createService": "Register service"
+		},
+		"alts": {
+			"iconLogin": "icon for a cabinet link",
+			"iconСreateAccount": "icon for a user registration link",
+			"iconСreateService": "icon for a service registration link"
+		}
+	},
+	
+	"loginpage": {
+		"title": "Login to personal account",
+		"links": {
+			"login": "Login",
+			"passwordReset": "Forgot your password?"
+		},
+		"placeholders": {
+			"email": "Enter mail",
+			"password": "Enter password"
+		},
+		"errors": {
+			"validEmail": "Invalid address entered",
+			"validPassword": "A space character is not allowed in the password",
+			"minLength": "Minimum 6 characters",
+			"maxLength": "Maximum 25 characters",
+			"required": "Required field"
+		},
+		"alts": {
+			"iconPassword": "Icon for a password",
+			"iconLogin": "Icon for a cabinet link",
+			"iconEmail": "Icon for a email"
+		}
+	}
+}
