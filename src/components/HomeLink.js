@@ -4,9 +4,9 @@ import styled from 'styled-components';
 
 
 
-const HomeLink = ({icon, title, alt, href}) => {
+const HomeLink = ({icon, title, alt, linkTo}) => {
     return (
-            <StyledLink to={`/${href}`}>
+            <StyledLink to={`/${linkTo}`}>
                 <LinkIcon>
                     <img src={icon} alt={alt}/>
                 </LinkIcon>

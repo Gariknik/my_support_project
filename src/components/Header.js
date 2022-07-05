@@ -7,12 +7,10 @@ import LogoIcon from '../assets/IconLogo.svg';
 const Header = () => {
     return (
         <StyledHeader>
-            <StyledLink to='/'>
-                <Logo>
-                    <img src={LogoIcon} alt='Logo'/>
-                    <LogoText>SUPPORT.GE</LogoText>
-                </Logo>
-            </StyledLink>
+            <Logo to='/'>
+                <img src={LogoIcon} alt='Logo'/>
+                <LogoText>SUPPORT.GE</LogoText>
+            </Logo>
         </StyledHeader>
 )
     ;
@@ -33,11 +31,9 @@ const StyledHeader = styled.header`
     text-decoration: none;
 `;
 
-const StyledLink = styled(Link)`
-    text-decoration: none;
-`;
 
-const Logo = styled.div`
+const Logo = styled(Link)`
+    text-decoration: none;
     height: 100%;
     display: flex;
     align-items: center;

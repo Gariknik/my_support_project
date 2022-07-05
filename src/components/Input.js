@@ -6,9 +6,9 @@ const Input = ({type='text', placeholder, register, name, required, pattern, err
     return (
         <>
             <InputWrapper>
-                <LinkIcon>
+                <InputIcon>
                     <img src={icon} alt={alt}/>
-                </LinkIcon>
+                </InputIcon>
                 <StyledInput
                     type={type}
                     placeholder={placeholder}
@@ -56,7 +56,7 @@ const InputWrapper = styled.div `
 `;
 
 
-const LinkIcon = styled.div`
+const InputIcon = styled.div`
     display: block;
     width: 48px;
     height: 48px;
