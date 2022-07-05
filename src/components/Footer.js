@@ -7,11 +7,11 @@ import FacebookIcon from '../assets/social-media/FacebookIcon.svg';
 
 
 const Footer = () => {
-    const {t} = useTranslation('translation',  {keyPrefix: 'footer.alts'});
+    const {t} = useTranslation('translation',  {keyPrefix: 'footer'});
     return (
         <StyledFooter>
-            <SocialLink icon={InstagramIcon} link='https://www.instagram.com' alt={t("iconInstagram")} />
-            <SocialLink icon={FacebookIcon} link='https://www.facebook.com' alt={t("iconFacebook")} />
+            <SocialLink icon={InstagramIcon} link='https://www.instagram.com' alt={t("iconInstagramAlt")} />
+            <SocialLink icon={FacebookIcon} link='https://www.facebook.com' alt={t("iconFacebookAlt")} />
             <FooterCopyrights>© 2021 ООО SUPPORT.GE</FooterCopyrights>
         </StyledFooter>
     );

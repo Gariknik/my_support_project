@@ -44,9 +44,8 @@ async function loginUser(url = '', data = {}) {
 
 const LoginPage = () => {
     const {t} = useTranslation('translation',  {keyPrefix: 'loginpage'});
-
-    const [responseMessage, setResponseMessage] = useState('')
-    const [responseIsError, setResponseIsError] = useState(false)
+    const [responseMessage, setResponseMessage] = useState('');
+    const [responseIsError, setResponseIsError] = useState(false);
     const {
         register,
         reset,
@@ -69,45 +68,45 @@ const LoginPage = () => {
             <Title>{t("title")}</Title>
             <StyledMessage isError={responseIsError}>{responseMessage}</StyledMessage>
             <Input
-                placeholder={t("placeholders.email")}
+                placeholder={t("email.placeholder")}
                 register={register}
                 name='email'
                 required={true}
                 pattern={{
                     value: EMAIL_PATTERN,
-                    message: t("errors.validEmail")}
+                    message: t("email.error")}
                 }
                 icon={EmailIcon}
-                alt={t("alts.iconEmail")}
+                alt={t("email.alt")}
                 error={errors}
             />
             <Input
                 type='password'
-                placeholder={t("placeholders.password")}
+                placeholder={t("password.placeholder")}
                 register={register}
                 name="password"
                 required={true}
                 pattern={{
                     value: PASSWORD_PATTERN,
-                    message: t("errors.validPassword")
+                    message: t("password.error")
                 }}
                 rules={{
                     minLength: {
                         value: MIN_LENGTH,
-                        message: t("errors.minLength")
+                        message: t("password.minLength")
                     },
                     maxLength: {
                         value: MAX_LENGTH,
-                        message: t("errors.maxLength")
+                        message: t("password.maxLength")
                     }
                 }}
                 icon={PasswordIcon}
-                alt={t("alts.iconPassword")}
+                alt={t("password.alt")}
                 error={errors}
             />
             <LoginLinkWrapper>
-                <LoginLink icon={Lock} title={t("links.passwordReset")} alt={t("alts.iconLogin")}/>
-                <StyledButtonSubmit type="submit" value={t("links.login")} disabled={!isValid} />
+                <LoginLink icon={Lock} title={t("passwordReset")} alt={t("iconLoginAlt")}/>
+                <StyledButtonSubmit type="submit" value={t("login")} disabled={!isValid} />
             </LoginLinkWrapper>
         </StyledForm>
     );

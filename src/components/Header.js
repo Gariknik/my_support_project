@@ -5,19 +5,20 @@ import LogoIcon from '../assets/IconLogo.svg';
 
 
 const Header = () => {
-    const {t, i18n} = useTranslation('translation',  {keyPrefix: 'header.alts'});
+    const {t, i18n} = useTranslation('translation',  {keyPrefix: 'header'});
     const changeLanguage = (language) => {
         i18n.changeLanguage(language)
     };
+    const changeLocale = (e) => changeLanguage(e.target.value);
     return (
         <StyledHeader>
             <Logo>
-                <img src={LogoIcon} alt={t("iconLogo")}/>
+                <img src={LogoIcon} alt={t("iconLogoAlt")}/>
                 <LogoText>SUPPORT.GE</LogoText>
             </Logo>
             <div>
-                <StyledButtonLocale onClick={() => changeLanguage('uk')}>UK</StyledButtonLocale>
-                <StyledButtonLocale onClick={() => changeLanguage('en')}>EN</StyledButtonLocale>
+                <StyledButtonLocale onClick={changeLocale} value='uk'>{t("UK")}</StyledButtonLocale>
+                <StyledButtonLocale onClick={changeLocale} value='en'>{t("EN")}</StyledButtonLocale>
             </div>
         </StyledHeader>
     );

@@ -15,7 +15,7 @@ const Input = ({type='text', placeholder, register, name, required, pattern, err
                     type={type}
                     placeholder={placeholder}
                     {...register(name, {
-                        required: required ? t("errors.required") : false,
+                        required: required ? t("required") : false,
                         pattern: pattern,
                         ...rules
                     })}

@@ -13,9 +13,9 @@ const HomePage = () => {
             <Title>
                 {t("title")}
             </Title>
-            <HomeLink icon={Into} title={t("links.login")} alt={t("alts.iconLogin")} href="login" />
-            <HomeLink icon={AddUser} title={t("links.createAccount")} alt={t("alts.iconСreateAccount")} />
-            <HomeLink icon={AddService} title={t("links.createService")} alt={t("alts.iconСreateService")} />
+            <HomeLink icon={Into} title={t("login.link")} alt={t("login.alt")} href="login" />
+            <HomeLink icon={AddUser} title={t("createAccount.link")} alt={t("createAccount.alt")} />
+            <HomeLink icon={AddService} title={t("createService.link")} alt={t("createService.alt")} />
         </StyledContent>
     );
 };
