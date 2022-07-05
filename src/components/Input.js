@@ -1,7 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import styled from "styled-components";
 
 const Input = ({type='text', placeholder, register, name, required, pattern, error, rules, icon, alt}) => {
+    const {t} = useTranslation('translation',  {keyPrefix: 'loginpage'});
     const isValid = !Boolean(error[name]);
     return (
         <>
@@ -13,7 +15,7 @@ const Input = ({type='text', placeholder, register, name, required, pattern, err
                     type={type}
                     placeholder={placeholder}
                     {...register(name, {
-                        required: required ? 'Поле обязательное к заполнению' : false,
+                        required: required ? t("required") : false,
                         pattern: pattern,
                         ...rules
                     })}

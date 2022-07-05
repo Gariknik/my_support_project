@@ -1,0 +1,46 @@
+{	
+	"header": {
+		"UK": "UK",
+		"EN": "EN",
+		"iconLogoAlt": "Logo"
+	},
+	"footer": {
+		"iconFacebookAlt": "Icon for link to Facebook",
+		"iconInstagramAlt": "Icon for link to Instagram"
+	},
+	"homepage": {
+		"title": "Welcome to SUPPORT.CLONE",
+		"login": {
+			"link": "Log in to personal account",
+			"alt": "icon for a cabinet link"
+		},
+		"createAccount": {
+			"link": "Register User",
+			"alt": "icon for a user registration link"
+		},
+		"createService": {
+			"link": "Register service",
+			"alt": "icon for a service registration link"
+		}
+	},
+	
+	"loginpage": {
+		"title": "Login to personal account",
+		"required": "Required field",
+		"login": "Login",
+		"passwordReset": "Forgot your password?",
+		"iconLoginAlt": "Icon for a cabinet link",
+		"email": {
+			"placeholder": "Enter email",
+			"error": "Invalid address entered",
+			"alt": "Icon for a email"
+		},
+		"password": {
+			"placeholder": "Enter password",
+			"error": "A space character is not allowed in the password",
+			"minLength": "Minimum 6 characters",
+			"maxLength": "Maximum 25 characters",
+			"alt": "Icon for a password"
+		}
+	}
+}

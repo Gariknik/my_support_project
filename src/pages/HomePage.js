@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import HomeLink from "../components/HomeLink";
 import styled from 'styled-components';
 import Into from '../assets/icons/Into.svg'
@@ -6,17 +7,17 @@ import AddUser from "../assets/icons/AddUser.svg";
 import AddService from "../assets/icons/AddService.svg";
 
 const HomePage = () => {
+    const {t} = useTranslation('translation',  {keyPrefix: 'homepage'});
     return (
         <StyledContent>
             <Title>
-                Вітаємо на SUPPORT.CLONE
+                {t("title")}
             </Title>
-            <HomeLink icon={Into} title='Увійти в особистий кабінет' alt='icon for a cabinet link' />
-            <HomeLink icon={AddUser} title='Зареєструвати користувача' alt='icon for a user registration link' />
-            <HomeLink icon={AddService} title='Реєстрація сервісу' alt='icon for a service registration link' />
+            <HomeLink icon={Into} title={t("login.link")} alt={t("login.alt")} href="login" />
+            <HomeLink icon={AddUser} title={t("createAccount.link")} alt={t("createAccount.alt")} />
+            <HomeLink icon={AddService} title={t("createService.link")} alt={t("createService.alt")} />
         </StyledContent>
-)
-    ;
+    );
 };
 
 export default HomePage;

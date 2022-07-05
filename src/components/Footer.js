@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import SocialLink from "./SocialLink";
 import InstagramIcon from '../assets/social-media/InstaIcon.svg';
@@ -6,14 +7,14 @@ import FacebookIcon from '../assets/social-media/FacebookIcon.svg';
 
 
 const Footer = () => {
+    const {t} = useTranslation('translation',  {keyPrefix: 'footer'});
     return (
         <StyledFooter>
-            <SocialLink icon={InstagramIcon} link='https://www.instagram.com' alt='Link to Instagram' />
-            <SocialLink icon={FacebookIcon} link='https://www.facebook.com' alt='Link to Facebook' />
+            <SocialLink icon={InstagramIcon} link='https://www.instagram.com' alt={t("iconInstagramAlt")} />
+            <SocialLink icon={FacebookIcon} link='https://www.facebook.com' alt={t("iconFacebookAlt")} />
             <FooterCopyrights>© 2021 ООО SUPPORT.GE</FooterCopyrights>
         </StyledFooter>
-)
-    ;
+    );
 };
 
 export default Footer;
